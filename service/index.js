@@ -1,3 +1,15 @@
 const express = require('express')
+const models = require('./db')
 const app = express()
-app.listen(5000, () => console.log('success!'))
+app.get('/user/get', (req, res) => {
+    console.log(req)
+    console.log(res)
+    res.send('get success')
+})
+app.post('/user/post', (req, res) => {
+    console.log(req)
+    console.log(res)
+    res.send('post success')
+})
+app.listen(9500)
+console.log('**********【服务器启动成功】**********')
